@@ -1,0 +1,330 @@
+/* ==========================================================================
+   CSS 
+   ========================================================================== */
+
+
+ /* ==========================================================================
+    BASE STYLES
+
+    Colors used: Gray 4a4a4a & 4D4D4D/Purple 602d91/Orange f4783b/Teal 00a9a3/
+                 Green b2d235/Yellow fff200;
+    ========================================================================== */
+ 
+
+html, body, div, span, h1, h2, h3, p, blockquote, a, abbr, address, big, cite, code, del, dfn, em, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font: 'Raleway', sans-serif;
+  letter-spacing: 2px;
+  font-size: 14px;
+  line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: #333333;
+}
+
+h1 {
+  font-size:250%;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: 'GillSans', sans-serif;
+  font-weight: 500;
+  margin: 1em 0;
+}
+
+h2 {
+  font-size:175%;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  margin: 0 0 1em 0;
+}
+
+h3 {
+  font-size:150%;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  margin: 0 0 1em 0;
+}
+
+h4 {
+  font-size:120%;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  margin: 0 0 1em 0;
+}
+
+p {
+  font-size:120%;
+  line-height: 1.6;
+  font-family:'Raleway', sans-serif;
+  margin-bottom: 2em;
+  font-weight: 400;
+}
+
+table {
+  font-size:120%;
+  line-height: 1.6;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+
+.navigation-bar {
+  height: 50px;
+  width: 100%;
+  text-align:right; 
+}
+
+.fixed {
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  height: 50px;
+  z-index: 1;
+}
+
+.navigation-bar img{
+  float:left;
+  padding: 0;
+  margin-top: 25px;
+  margin-bottom: 0px;
+  margin-left: 45px;
+  display: inline;
+  position: relative;
+}
+
+.navigation-bar ul {
+  padding: 0px;
+  margin: 0px;
+  margin-right: 45px;
+  list-style: none;
+  vertical-align: bottom;
+
+}
+
+.navigation-bar li {
+  list-style-type: none;
+  padding: 0px;
+  height: 24px;
+  margin-top: 4px;
+  margin-bottom: 0px;
+  display: inline-block;
+}
+
+.navigation-bar li a {
+  color: #4a4a4a;
+  font-size: 100%;
+  font-family: "Raleway", "OpenSans", sans-serif;
+  letter-spacing: 2px;
+  text-decoration: none;
+  line-height: 70px;
+  padding: 5px 15px;
+}
+
+.navigation-bar a:hover {
+  color: #b2d235;
+}
+
+
+/* ==========================================================================
+   HEADER & HERO
+   ========================================================================== */
+
+
+header {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 0;
+  color: #FFFFFF;
+  text-align: center;
+  min-height: 80vh;
+  position: relative;
+  width: 100%;
+}
+
+#masthead {
+  width: 100%;
+  height: 830px;
+}
+
+.slogan {
+  color: #fff;
+  text-align: left;
+  margin-left: 279px;
+  position: absolute;
+  top: 401px;
+  line-height: auto;
+  font-size: 1.2em;
+}
+
+/* ==========================================================================
+   SERVICES
+   ========================================================================== */
+
+.services h1 {
+  color: #fff;
+  padding: 5px;
+  margin-top: 10px;
+  text-align: center;
+  letter-spacing: .15em;
+}
+.services p {
+  color: #fff;
+  padding: 5px;
+  margin-left: 45px;
+  margin-right: 45px;
+  margin-top: 45px;
+}
+
+.services {
+  width: 100%;
+  height: 70vh;
+  background-color: #4D4D4D;
+}
+
+.s-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 250px;
+}
+
+
+/* ==========================================================================
+   HISTORY
+   ========================================================================== */
+
+.history h1 {
+  color: #fff;
+  padding: 5px;
+  margin-top: 10px;
+  text-align: center;
+  letter-spacing: .15em;
+}
+
+.history p {
+  color: #fff;
+  padding: 5px;
+  margin-left: 45px;
+  margin-right: 45px;
+  margin-top: 45px;
+}
+
+.history {
+  width: 100%;
+  height: 70vh;
+  background-color: #00a9a3;
+}
+
+
+
+
+
+/* ==========================================================================
+   GRID SYSTEM
+   ========================================================================== */
+
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7  }*/
+
+.span_1_of_2{
+  width: 48.2%;
+}
+.span_2_of_2{
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+footer {
+  background-color: #000;
+  padding: 28px 0 22px;
+  height: 65px;
+}
+
+.footer-container {
+  height: 65px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
