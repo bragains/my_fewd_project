@@ -11,15 +11,26 @@
     ========================================================================== */
  
 
-html, body, div, span, h1, h2, h3, p, blockquote, a, abbr, address, big, cite, code, del, dfn, em, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+/*html, body, div, span, h1, h2, h3, p, blockquote, a, abbr, address, big, cite, code, del, dfn, em, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
   font-family: inherit;
   vertical-align: baseline;
+}*/
+
+.wrap {
+  display: inline-block;
+  width: 100%;
+  max-width: 1000px;
+  padding: 40px 20px;
+
 }
 
+.header, .section, .nav, .footer, img {
+  flex: 1 100%;
+}
 
 html {
   -ms-text-size-adjust: 100%;
@@ -31,10 +42,10 @@ body {
   font: 'Raleway', sans-serif;
   letter-spacing: 2px;
   font-size: 14px;
-  line-height: 1;
+  line-height: 0;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  color: #333333;
+  color: #333;
 }
 
 h1 {
@@ -71,6 +82,7 @@ h4 {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
   margin: 0 0 1em 0;
+  text-align: center;
 }
 
 p {
@@ -88,18 +100,14 @@ table {
   font-weight: 400;
 }
 
-img {
+/*img {
     max-width: 100%;
     height: auto;
     border: 0;
-}
+}*/
 
-.wrap {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
+
+
 
 
 /* ==========================================================================
@@ -117,7 +125,7 @@ img {
   background-color: #fff;
   width: 100%;
   height: 50px;
-  z-index: 1;
+  z-index: 3;
 }
 
 .navigation-bar img{
@@ -168,37 +176,51 @@ img {
    ========================================================================== */
 
 
-header {
+header.masthead{
+  width: 100%;
+  min-height: 630px;
+}
+
+.main-image {
   display: inline-block;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin-top: 0;
-  color: #FFFFFF;
-  text-align: center;
   min-height: 80vh;
   position: relative;
   width: 100%;
-}
-
-#masthead {
-  width: 100%;
-  height: 830px;
+  z-index: 1;
 }
 
 .slogan {
   color: #fff;
   text-align: left;
-  margin-left: 279px;
+  margin-left: 375px;
   position: absolute;
-  top: 401px;
+  top: 333px;
   line-height: auto;
   font-size: 1.2em;
+  z-index: 2;
 }
+
 
 /* ==========================================================================
    SERVICES
    ========================================================================== */
+
+/*.services {
+  display: flex;
+  position: absolute;
+  width: 60%;
+  z-index: 2;
+}*/
+
+.services img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
 
 .services h1 {
   color: #fff;
@@ -207,26 +229,17 @@ header {
   text-align: center;
   letter-spacing: .15em;
 }
-.services p {
-  color: #fff;
-  padding: 5px;
-  margin-left: 45px;
-  margin-right: 45px;
-  margin-top: 45px;
+
+.services h3 {
+  margin-bottom: 2px;
+  text-align: center;
 }
 
-.services {
-  width: 100%;
-  height: 70vh;
-  background-color: #4D4D4D;
+.panel {
+  padding: 50px;
+  display: none;
+  background-color: 4a4a4a;
 }
-
-.s-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 250px;
-}
-
 
 /* ==========================================================================
    HISTORY
@@ -250,13 +263,45 @@ header {
 
 .history {
   width: 100%;
-  height: 70vh;
-  background-color: #00a9a3;
+  height: 450px;
+  background-color: #4a4a4a;
 }
 
+/* ==========================================================================
+   PROJECTS
+   ========================================================================== */
 
+.projects {
+  width: 100%;
+  height: 450px;
+  background-color: #602d91;
+}
 
+.projects h1 {
+  color: #fff;
+  padding: 5px;
+  margin-top: 10px;
+  text-align: center;
+  letter-spacing: .15em;
+}
 
+/* ==========================================================================
+   PROCESS
+   ========================================================================== */
+
+.process {
+  width: 100%;
+  height: 450px;
+  background-color: #f4783b;
+}
+
+.process h1 {
+  color: #fff;
+  padding: 5px;
+  margin-top: 10px;
+  text-align: center;
+  letter-spacing: .15em;
+}
 
 /* ==========================================================================
    GRID SYSTEM
@@ -271,7 +316,7 @@ header {
 .col {
   display: block;
   float:left;
-  margin: 1% 0 1% 1.6%;
+/*  margin: 1% 0 1% 1.6%;*/
 }
 .col:first-child { margin-left: 0; }
 
@@ -279,25 +324,20 @@ header {
 .group:after { content:""; display:table; }
 .group:after { clear:both;}
 .group { zoom:1; /* For IE 6/7  }*/
+}
 
-.span_1_of_2{
+.span_1_of_2 {
   width: 48.2%;
 }
-.span_2_of_2{
+
+.span_2_of_2 {
   width: 100%;
 }
 
+.span_1_of_3 {
+  width: 20%;
 
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
