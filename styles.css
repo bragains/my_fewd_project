@@ -1,0 +1,899 @@
+/* ==========================================================================
+   CSS 
+   ========================================================================== */
+
+
+
+ /* ==========================================================================
+    BASE STYLES
+
+    Colors used: Gray 4a4a4a & 4D4D4D
+                 Purple 602d91
+                 Orange f4783b
+                 Teal 00a9a3
+                 Green b2d235
+                 Yellow fff200
+    ========================================================================== */
+ 
+
+html, body, div, span, h1, h2, h3, h4, p, a, abbr, em, small, strong, var,
+form, label, table, tbody, tfoot, thead, tr, th, td, canvas, embed,  header, menu, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 'GillSans', sans-serif;
+  letter-spacing: 2px;
+  font-size: 14px;
+  line-height: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: #333;
+}
+
+.header, .section, .nav, .footer, img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  width: 100%;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+
+h1 {
+  font-size:150%;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: 'GillSans', sans-serif;
+  font-weight: 500;
+  margin: 1em 0;
+  padding: 5px;
+}
+
+h2 {
+  font-size:150%;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: 'GillSans', sans-serif;
+  font-weight: 400;
+  margin: 0 0 1em 0;
+  color: #fff;
+}
+
+
+h4 {
+  font-size:100%;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: 'GillSans', sans-serif;
+  font-weight: 300;
+  margin: 0 0 1em 0;
+  text-align: center;
+}
+
+p {
+  font-size:90%;
+  line-height: 1.6;
+  font-family:'Raleway', sans-serif;
+  margin-bottom: 2em;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+}
+
+table {
+  font-size:120%;
+  line-height: 1.6;
+  font-family: 'GillSans', sans-serif;
+  font-weight: 400;
+}
+
+a,
+button {
+    color: inherit;
+    transition: .3s;
+}
+a {
+    text-decoration: none;
+}
+
+button {
+    overflow: visible;
+    border: 0;
+    font: inherit;
+    -webkit-font-smoothing: inherit;
+    letter-spacing: inherit;
+    background: none;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+
+/* ==========================================================================
+   GRID SYSTEM
+   ========================================================================== */
+
+.grid-container {
+  width: 100%;
+  /*max-width: 1000px;*/
+  margin: 0 auto;
+/*  display: block;*/
+}
+
+.grid-container* {
+  box-sizing: border-box;
+}
+
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*==CLEARFIX==*/
+
+.row:before,
+.row:after {
+  content:"";
+  display: block;
+  clear: both;
+}
+
+
+/*Grid system based off 6 columns*/
+
+[class*='col-'] {
+  float: left;
+  min-height: 1px;
+  width: 100%;
+  display: block;
+}
+
+[class*='col-']:first-child {margin-left: 0}
+
+.col-1 {
+  width: 50%;
+}
+
+.col-2 {
+  width: 33.3%;
+}
+
+.col-3 {
+  width: 100%;
+}
+
+.col-4 {
+  width: 100%;
+}
+
+.col-5 {
+  width: 100%;
+}
+
+.col-6 {
+  width: 100%;
+}
+
+
+
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+
+.navigation-bar {
+  height: 50px;
+  width: 100%;
+  text-align:left; 
+  display: block;
+}
+
+.fixed {
+  position: fixed;
+  background-color: #b2d235;
+  width: 100%;
+  height: 50px;
+  z-index: 3;
+}
+
+.navigation-bar img{
+  float:left;
+  padding: 0;
+  height: 35px;
+  width: 35px;
+  margin-top: 27px;
+  margin-bottom: 10px;
+  margin-left: 42px;
+  display: inline;
+  position: relative;
+}
+
+.navigation-bar ul {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  margin-right: 10px;
+  list-style: none;
+  vertical-align: bottom;
+}
+
+.navigation-bar li {
+  list-style-type: none;
+  padding: 0px;
+  margin-top: 29px;
+  display: inline-block;
+}
+
+.navigation-bar li a {
+  color: #fff;
+  font-size: 90%;
+  font-family: "GillSans", sans-serif;
+  letter-spacing: 1px;
+  text-decoration: none;
+  padding: 8px 10px;
+  display: inline-block;
+  bottom: 0;
+}
+
+.navigation-bar a:hover {
+  color: #4a4a4a;
+}
+
+
+
+/* ==========================================================================
+   HEADER & HERO
+   ========================================================================== */
+
+header {
+  background-color: #b2d235;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 0;
+  position: relative;
+  width: 100%;
+  min-height: 350px;
+}
+
+header img {
+  position: absolute;
+  right: 0;
+  width: auto;
+  height: 350px;
+  /*z-index: 5;*/
+}
+
+
+.logo {
+  color: #b2d235;
+  letter-spacing: 10px;
+  font-size: 227%;
+  margin-top: 60px;
+}
+
+.logo h1 {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 2px;
+  padding-left: 10px;
+ 
+}
+
+.logo-lg h1 {
+  display: none;
+}
+
+.logo-back {
+  background-color: #4a4a4a;
+}
+
+.strong {
+  font-weight: 600;
+}
+
+.slogan {
+  display: none;
+}
+
+/* ==========================================================================
+   TABS
+   ========================================================================== */
+.tabs {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  padding: 10px;
+  margin-top: 27px;
+  max-width: 1000px;
+}
+
+/*TAB LINKS*/
+/*Clearfix*/
+.tab-links:after {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+.tab-links ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.tab-links li {
+  text-align: center;
+  list-style: none;
+  margin-top: 40px;
+}
+
+.tab-links a {
+display: inline-block;
+transition: all linear 0.15s;
+}
+
+.tab-links a:hover {
+color: #00a9a3;
+}
+
+li.active a, li.active a:hover {
+  color: #00a9a3;
+} 
+
+/*Content of Tabs*/
+.tab-content {
+  padding: 5px;
+  background: #fff;
+}   
+
+.tab {
+  display: none;
+}
+
+.tab.active {
+  display: block;
+}
+
+.services h4 {
+  margin-top: 1em;
+}
+
+.services p {
+  color: #39393a;
+  opacity: 0.7;
+  padding: 5px;
+  margin-left: 45px;
+  margin-right: 45px;
+  margin-top: 45px;
+}
+
+/* ==========================================================================
+   ABOUT
+   ========================================================================== */
+
+.about {
+  width: 100%;
+  background-color: #00a9a3;
+  display: block;
+  text-align: center;
+}
+
+.about h1 {
+  display: inline-block;
+  color: #fff;
+  opacity: 0.9;
+  padding: 15px;
+  margin-top: 40px;
+  text-align: center;
+  letter-spacing: .15em;
+}
+
+.about p {
+  color: #fff;
+  opacity: 0.7;
+  padding-bottom: 45px;
+  margin-left: 45px;
+  margin-right: 45px;
+  margin-bottom: 0px;
+}
+
+
+
+
+/* ==========================================================================
+   TEAM
+   ========================================================================== */
+
+.team {
+  /*width: 100%;*/
+  display: block;
+/*  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: 0;
+  margin-left: 0;*/
+  /*position: relative;*/
+}
+
+
+/*.row-team {
+  margin-right: -15px;
+  margin-left: -15px;
+}*/
+
+
+.teammate-detail {
+  width: 100%;
+  padding: 15px;
+  background-color: #f4783b;
+  height: auto;
+  min-height: 425px;
+  position: absolute;
+  left: 0;
+  text-align: center;
+}
+
+/*.teammate-detail > div {
+  display: table-cell;
+  vertical-align: left;
+  height: 425px;
+}*/
+
+.teammate-detail h1 {
+  display: inline-block;
+  color: #fff;
+  opacity: 0.9;
+  padding: 15px;
+  margin-top: 40px;
+  text-align: center;
+  letter-spacing: .15em;
+}
+
+.teammate-detail p, .more-info, .teammate-social {
+  color: #fff;
+  text-align: center;
+  line-height: 28px;
+  padding-bottom: 45px;
+  margin-left: 45px;
+  margin-right: 45px;
+  margin-bottom: 0px;
+  opacity: 0.7;
+}
+
+.teammate-social i {
+  color: #fff;
+  opacity: 0.7;
+  padding-right: 15px;
+}
+
+.read-more {
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.7;
+  font-weight: 400;
+  font-family:"GillSans", sans-serif;
+}
+
+a.read-more:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.team-pic {
+  width: 100%;
+  padding: 15px;
+  display: inline-block;
+  min-height: 455px;
+  background-size: cover;
+  background-position: center center;
+  right: 0;
+}
+
+
+
+/* ==========================================================================
+   MODAL FORM
+   ========================================================================== */
+
+.form {
+  width: 355px;
+  height: auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 40px -10px #000;
+  margin: 20px 40px;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  font-family:'GillSans',sans-serif;
+  position: relative;
+}
+
+form h2 {
+  margin: 0 auto;
+  padding-bottom: 10px;
+  color: #4a4a4a;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: none;
+  outline: none;
+  resize: none;
+  border: 0;
+  font-family:'GillSans',sans-serif;
+  transition: all .3s;
+  border-bottom: 0.5px solid #727272;
+}
+
+input:focus {
+  border-bottom: 4px solid #727272;
+  transition: all .3s;
+}
+
+form p:before {
+  content: attr(type);
+  display: block;
+  margin: 28px 0 0;
+  font-size: 14px;
+  color: #4a4a4a;
+}
+
+button {
+  position: static;
+  padding: 17px;
+  font-family:'GillSans', sans-serif;
+  background-color: #b2d235;
+  color: #fff;
+  cursor: pointer;
+  transition: linear .3s;
+  margin: 0 auto;
+}
+
+button:hover {
+  background: #4d4d4d;
+  color: #fff;
+}
+
+form div {
+  color: #4d4d4d;
+  padding: 16px 4px;
+  text-align: center;
+}
+
+form a:hover {
+  color: #00a9a3;
+}
+
+form span {
+  margin: 10px auto;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 99; /* Sit on top */
+    height: auto;
+    left: 20%;
+    top: 30%;
+    margin-left: -150px;
+    margin-top: -150px;
+}
+
+/* Modal Content */
+.modal-content {
+    margin: auto;
+    padding: 40px;
+    /*position: absolute;*/
+}
+
+/* The Close Button */
+.close {
+    color: #4a4a4a;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.close:hover,
+.close:focus {
+    color: #b2d235;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+
+/*#footer {
+  display: block;
+  position: relative;
+  background-color: #39393a;
+  width: 100%;
+  height: auto;
+  }
+
+#footer h4 {
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}*/
+
+
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+
+
+      @media screen and (min-width: 992px){
+
+        .col-1{ width: 16.66%;}
+        .col-2{ width: 33.33%;}
+        .col-3{ width: 50%;}
+        .col-4{ width: 66%;}
+        .col-5{ width: 83.33%;}
+        .col-6{ width: 100%;}
+
+        .navigation-bar li {
+          padding: 0px;
+          padding-bottom: 10px;
+          margin-top: 4px;
+          margin-bottom: 10px;
+          display: inline-block;
+        }
+
+        .navigation-bar li a {
+          font-size: 110%;
+          letter-spacing: 2px;
+          line-height: 55px;
+          padding: 5px 15px;
+        }
+
+        .navigation-bar img{
+          width: 50px;
+          height: 50px;
+          margin-top: 20px;
+          margin-left: 45px;
+        }
+
+        header {
+          min-height: 630px;
+        }
+
+        header img {
+          z-index: 19;
+          width: auto;
+          height: auto;
+        }
+
+        .logo h1 {
+          display: none;
+        }
+
+        .logo-lg h1 {
+          font-family: 'GillSans', sans-serif;
+          display: block;
+          color: #b2d235;
+          letter-spacing: 15px;
+          font-size: 5em;
+          max-width: 74%;
+          margin-top: 3em;
+          background-color: #4a4a4a;
+          padding-left: 40px;
+        }
+
+        .strong {
+          font-weight: 675;
+        }
+
+        .slogan {
+          display: block;
+          padding: 0;
+          margin-top: -52px;
+          font-family: 'GillSans', sans-serif;
+        }
+
+        .slogan p{
+          color: #4d4d4d;
+        }  
+
+        .services, .about {
+          min-height: 450px;
+        }
+
+        .tabs {
+          max-width: none;
+        }
+
+        .fa-4x {
+          font-size: 5em;
+        }
+
+          
+        h1, h2, h4 {
+           font-size:250%;
+           line-height: 1;
+           text-transform: uppercase;
+           font-family: 'GillSans', sans-serif;
+           font-weight: 500;
+           margin: 1em 0; 
+        }
+
+        h2 {
+            font-size:175%;
+            font-weight: 400;
+            margin: 0 0 1em 0;
+        }
+
+        h4 {
+            font-size:150%;
+            font-weight: 300;
+            margin: 0 0 1em 0;
+            text-align: center;
+        }
+       
+        p {
+            font-size:120%;
+            line-height: 1.6;
+            margin-bottom: 2em;
+            font-weight: 400;
+        }
+
+        .teammate-detail {
+          width: 50%;
+          min-height: 480px;
+        }
+
+        .team-pic {
+          min-height: 480px;
+          position: absolute;
+          width: 50%;
+        }
+
+      }   
+
+    /*FOR TABLET DISPLAYS*/
+        
+    @media screen 
+    and (min-device-width: 600px) 
+    and (max-device-width: 991px) {
+
+        .col-1{ width: 16.66%;}
+        .col-2{ width: 33.33%;}
+        .col-3{ width: 50%;}
+        .col-4{ width: 100%;}
+        .col-5{ width: 100%;}
+        .col-6{ width: 100%;}  
+      
+        .navigation-bar li {
+          padding: 0px;
+          padding-bottom: 10px;
+          margin-top: 4px;
+          margin-bottom: 10px;
+        }
+
+        .navigation-bar li a {
+          font-size: 105%;
+          letter-spacing: 1.5px;
+          line-height: 45px;
+          padding: 5px 15px;
+        }
+
+        .navigation-bar img{
+          width: 50px;
+          height: 50px;
+          margin-top: 20px;
+          margin-left: 45px;
+        }
+
+        header {
+          min-height: 457px;
+        }
+        header img {
+          z-index: 19;
+          width: 190px;
+          height: auto;
+        }
+
+        .logo h1 {
+          display: inline-block;
+        }
+
+        .logo-lg h1 {
+          display: none;
+
+        }
+
+        .strong {
+          font-weight: 675;
+        }
+
+        .fa-4x {
+          font-size: 5em;
+        }
+
+          
+        h1, h2, h4 {
+           font-size:250%;
+           line-height: 1;
+           text-transform: uppercase;
+           font-family: 'GillSans', sans-serif;
+           font-weight: 500;
+           margin: 1em 0; 
+        }
+
+        h2 {
+            font-size:175%;
+            font-weight: 400;
+            margin: 0 0 1em 0;
+        }
+
+        h4 {
+            font-size:120%;
+            font-weight: 300;
+            margin: 0 0 1em 0;
+            text-align: center;
+        }
+       
+        p {
+            font-size:120%;
+            line-height: 1.6;
+            margin-bottom: 2em;
+            font-weight: 400;
+        }
+
+        .team-pic {
+            display: inline-block;
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
