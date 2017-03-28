@@ -3,43 +3,35 @@
    ========================================================================== */
 
 
+
  /* ==========================================================================
     BASE STYLES
 
-    Colors used: Gray 4a4a4a & 4D4D4D/Purple 602d91/Orange f4783b/Teal 00a9a3/
-                 Green b2d235/Yellow fff200;
+    Colors used: Gray 4a4a4a & 4D4D4D
+                 Purple 602d91
+                 Orange f4783b
+                 Teal 00a9a3
+                 Green b2d235
+                 Yellow fff200
     ========================================================================== */
  
 
-/*html, body, div, span, h1, h2, h3, p, blockquote, a, abbr, address, big, cite, code, del, dfn, em, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, h1, h2, h3, h4, p, a, abbr, em, small, strong, var,
+form, label, table, tbody, tfoot, thead, tr, th, td, canvas, embed,  header, menu, nav, section {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
   font-family: inherit;
   vertical-align: baseline;
-}*/
-
-.wrap {
-  display: inline-block;
-  width: 100%;
-  max-width: 1000px;
-  padding: 40px 20px;
-
 }
 
-.header, .section, .nav, .footer, img {
-  flex: 1 100%;
-}
-
-html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+* {
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font: 'Raleway', sans-serif;
+  font: 'GillSans', sans-serif;
   letter-spacing: 2px;
   font-size: 14px;
   line-height: 0;
@@ -48,65 +40,163 @@ body {
   color: #333;
 }
 
+.header, .section, .nav, .footer, img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  width: 100%;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+
 h1 {
-  font-size:250%;
+  font-size:150%;
   line-height: 1;
   text-transform: uppercase;
   font-family: 'GillSans', sans-serif;
   font-weight: 500;
   margin: 1em 0;
+  padding: 5px;
 }
 
 h2 {
-  font-size:175%;
-  line-height: 1;
-  text-transform: uppercase;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  margin: 0 0 1em 0;
-}
-
-h3 {
   font-size:150%;
   line-height: 1;
   text-transform: uppercase;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'GillSans', sans-serif;
   font-weight: 400;
   margin: 0 0 1em 0;
+  color: #fff;
 }
 
+
 h4 {
-  font-size:120%;
+  font-size:100%;
   line-height: 1;
   text-transform: uppercase;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'GillSans', sans-serif;
   font-weight: 300;
   margin: 0 0 1em 0;
   text-align: center;
 }
 
 p {
-  font-size:120%;
+  font-size:90%;
   line-height: 1.6;
   font-family:'Raleway', sans-serif;
   margin-bottom: 2em;
   font-weight: 400;
+  text-align: center;
+  color: white;
 }
 
 table {
   font-size:120%;
   line-height: 1.6;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'GillSans', sans-serif;
   font-weight: 400;
 }
 
-/*img {
+a,
+button {
+    color: inherit;
+    transition: .3s;
+}
+a {
+    text-decoration: none;
+}
+
+button {
+    overflow: visible;
+    border: 0;
+    font: inherit;
+    -webkit-font-smoothing: inherit;
+    letter-spacing: inherit;
+    background: none;
+    cursor: pointer;
+}
+
+button:focus {
+  outline: 0;
+}
+
+img {
     max-width: 100%;
     height: auto;
     border: 0;
-}*/
+}
+
+/* ==========================================================================
+   GRID SYSTEM
+   ========================================================================== */
+
+.grid-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.grid-container* {
+  box-sizing: border-box;
+}
+
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*==CLEARFIX==*/
+
+.row:before,
+.row:after {
+  content:"";
+  display: block;
+  clear: both;
+}
 
 
+/*Grid system based off 6 columns*/
+
+[class*='col-'] {
+  float: left;
+  min-height: 1px;
+  width: 100%;
+  display: block;
+}
+
+[class*='col-']:first-child {margin-left: 0}
+
+.col-1 {
+  width: 50%;
+}
+
+.col-2 {
+  width: 33.3%;
+}
+
+.col-3 {
+  width: 100%;
+}
+
+.col-4 {
+  width: 100%;
+}
+
+.col-5 {
+  width: 100%;
+}
+
+.col-6 {
+  width: 100%;
+}
 
 
 
@@ -117,12 +207,13 @@ table {
 .navigation-bar {
   height: 50px;
   width: 100%;
-  text-align:right; 
+  text-align:left; 
+  display: block;
 }
 
 .fixed {
   position: fixed;
-  background-color: #fff;
+  background-color: #b2d235;
   width: 100%;
   height: 50px;
   z-index: 3;
@@ -131,229 +222,1015 @@ table {
 .navigation-bar img{
   float:left;
   padding: 0;
-  margin-top: 25px;
-  margin-bottom: 0px;
-  margin-left: 45px;
+  height: 35px;
+  width: 35px;
+  margin-top: 27px;
+  margin-bottom: 10px;
+  margin-left: 10px;
   display: inline;
   position: relative;
 }
 
 .navigation-bar ul {
+  width: 100%;
   padding: 0px;
   margin: 0px;
-  margin-right: 45px;
+  margin-right: 10px;
   list-style: none;
   vertical-align: bottom;
-
 }
 
 .navigation-bar li {
   list-style-type: none;
   padding: 0px;
-  height: 24px;
-  margin-top: 4px;
-  margin-bottom: 0px;
+  margin-top: 29px;
   display: inline-block;
 }
 
 .navigation-bar li a {
-  color: #4a4a4a;
-  font-size: 100%;
-  font-family: "Raleway", "OpenSans", sans-serif;
-  letter-spacing: 2px;
+  color: #fff;
+  font-size: 90%;
+  font-family: "GillSans", sans-serif;
+  letter-spacing: 1px;
   text-decoration: none;
-  line-height: 70px;
-  padding: 5px 15px;
+  padding: 8px 10px;
+  display: inline-block;
+  line-height: 5px;
 }
 
 .navigation-bar a:hover {
-  color: #b2d235;
+  color: #4a4a4a;
 }
+
 
 
 /* ==========================================================================
    HEADER & HERO
    ========================================================================== */
 
-
-header.masthead{
-  width: 100%;
-  min-height: 630px;
-}
-
-.main-image {
+header {
+  background-color: #b2d235;
   display: inline-block;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin-top: 0;
-  min-height: 80vh;
   position: relative;
   width: 100%;
-  z-index: 1;
+  min-height: 350px;
 }
 
-.slogan {
-  color: #fff;
-  text-align: left;
-  margin-left: 375px;
+header img {
   position: absolute;
-  top: 333px;
-  line-height: auto;
-  font-size: 1.2em;
-  z-index: 2;
+  right: 0;
+  width: auto;
+  height: 350px;
 }
 
 
-/* ==========================================================================
-   SERVICES
-   ========================================================================== */
-
-/*.services {
-  display: flex;
-  position: absolute;
-  width: 60%;
-  z-index: 2;
-}*/
-
-.services img {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+.logo {
+  color: #b2d235;
+  letter-spacing: 10px;
+  font-size: 227%;
+  margin-top: 60px;
 }
 
-.services h1 {
-  color: #fff;
-  padding: 5px;
+.logo h1 {
+  display: inline-block;
   margin-top: 10px;
-  text-align: center;
-  letter-spacing: .15em;
-}
-
-.services h3 {
   margin-bottom: 2px;
-  text-align: center;
+  padding-left: 10px;
 }
 
-.panel {
-  padding: 50px;
+.logo-lg h1 {
   display: none;
-  background-color: 4a4a4a;
+}
+
+.logo-back {
+  background-color: #4a4a4a;
+}
+
+.strong {
+  font-weight: 600;
+}
+
+.slogan-lg {
+  display: none;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2017-3-26 22:37:5
+ * http://animista.net
+ * T: @cssanimista
+ * ---------------------------------------------- */
+
+@-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -.5em;
+      opacity: 0
+      }
+      40% {
+        opacity: .6
+        }
+        100% {
+          opacity: 1
+          }
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -.5em;
+    opacity:0
+    }
+    40% {
+      opacity: .6
+      }
+      100% {
+        opacity: 1
+        }
+}
+
+.tracking-in-expand {
+  -webkit-animation: tracking-in-expand 0.9s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  -moz-animation: tracking-in-expand 0.9s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation: tracking-in-expand 0.9s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 /* ==========================================================================
-   HISTORY
+   TABS
    ========================================================================== */
-
-.history h1 {
-  color: #fff;
-  padding: 5px;
-  margin-top: 10px;
-  text-align: center;
-  letter-spacing: .15em;
+.tabs {
+  width: 100%;
+  display: inline-block;
+  padding: 10px;
+  margin-top: 27px;
+  max-width: 1000px;
 }
 
-.history p {
-  color: #fff;
+/*TAB LINKS*/
+/*Clearfix*/
+.tab-links:after {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+.tab-links ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.tab-links li {
+  text-align: center;
+  list-style: none;
+  margin-top: 40px;
+}
+
+.tab-links a {
+display: inline-block;
+transition: all linear 0.15s;
+}
+
+.tab-links a:hover {
+color: #00a9a3;
+}
+
+li.active a, li.active a:hover {
+  color: #00a9a3;
+} 
+
+/*Content of Tabs*/
+.tab-content {
+  padding: 5px;
+  background: #fff;
+}   
+
+.tab {
+  display: none;
+}
+
+.tab.active {
+  display: block;
+}
+
+.services h4 {
+  margin-top: 1em;
+}
+
+.services p {
+  color: #39393a;
+  opacity: 0.7;
   padding: 5px;
   margin-left: 45px;
   margin-right: 45px;
   margin-top: 45px;
 }
 
-.history {
+/* ==========================================================================
+   ABOUT
+   ========================================================================== */
+
+.about {
   width: 100%;
-  height: 450px;
-  background-color: #4a4a4a;
+  background-color: #00a9a3;
+  display: block;
+  text-align: center;
+}
+
+.about h1 {
+  display: inline-block;
+  color: #fff;
+  opacity: 0.9;
+  padding: 15px;
+  margin-top: 40px;
+  text-align: center;
+  letter-spacing: .15em;
+}
+
+.about p {
+  color: #fff;
+  opacity: 0.7;
+  padding-bottom: 45px;
+  margin-left: 45px;
+  margin-right: 45px;
+  margin-bottom: 0px;
 }
 
 /* ==========================================================================
    PROJECTS
    ========================================================================== */
 
-.projects {
+#project-title h1 {
+  display: block;
+  position: relative;
+  color: #fff;
+  opacity: 1.0;
+  text-align: center;
+  background-color: #602d91;
+  padding: 15px;
+  
+}
+
+
+.slider {
+display: block;  
+width: 100%;
+overflow: hidden;
+height: 600px;
+position: relative;
+background-color: #000;
+}
+
+.slider ul {
+margin: 0;
+padding: 0;
+list-style: none;
+position: absolute;
+width: 300%;
+height: 100%;
+}
+
+.slider li {
+padding: 0;
+margin: 0;
+width: 33.333333%;
+height: 100%;
+overflow: hidden;
+position: absolute;
+}
+
+.slider li img {
+border: none;
+width: 100%;
+min-height: 100%;
+opacity: 0.5 !important;
+}
+
+.slider button {
+position: absolute;
+display: block;
+box-sizing: border-box;
+color: rgba(255, 255, 255, 0.7);
+margin-top: 300px;
+padding: 0;
+text-align:center;
+z-index: 2;
+}
+
+.slider button.prev {
+left: 85px;
+display: inline-block;
+}
+
+.slider button.next {
+right: 85px;
+display: inline-block;
+}
+
+.slider button:hover {
+color: #fff;
+opacity: 1.0;
+}
+
+.slider button:active {
+  color: none;
+}
+
+.slider-caption {
+  background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
-  height: 450px;
+  height: 600px;
+  position: absolute;
+}
+
+.caption {
+  text-align: center;
+  margin-left: 45px;
+  margin-right: 45px;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 50px;
+
+}
+
+.visit {
+  background-color: #00a9a3;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  margin-bottom: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 15px;
+  font-family: 'GillSans', sans-serif;
+  letter-spacing: 0.5em;
+  font-size: 120%;
+  font-weight: 300;
+  bottom: 0;
+}
+
+a .visit:hover {
   background-color: #602d91;
 }
 
-.projects h1 {
-  color: #fff;
-  padding: 5px;
-  margin-top: 10px;
-  text-align: center;
-  letter-spacing: .15em;
-}
 
 /* ==========================================================================
-   PROCESS
+   TEAM
    ========================================================================== */
 
-.process {
-  width: 100%;
-  height: 450px;
-  background-color: #f4783b;
-}
-
-.process h1 {
-  color: #fff;
-  padding: 5px;
-  margin-top: 10px;
-  text-align: center;
-  letter-spacing: .15em;
-}
-
-/* ==========================================================================
-   GRID SYSTEM
-   ========================================================================== */
-
-.section {
-  clear: both;
-  padding: 0px;
-  margin: 0px;
-}
-
-.col {
+.team {
   display: block;
-  float:left;
-/*  margin: 1% 0 1% 1.6%;*/
-}
-.col:first-child { margin-left: 0; }
-
-.group:before,
-.group:after { content:""; display:table; }
-.group:after { clear:both;}
-.group { zoom:1; /* For IE 6/7  }*/
 }
 
-.span_1_of_2 {
-  width: 48.2%;
-}
-
-.span_2_of_2 {
+.teammate-detail {
   width: 100%;
+  padding: 15px;
+  background-color: #f4783b;
+  height: auto;
+  min-height: 425px;
+  position: absolute;
+  left: 0;
+  text-align: center;
 }
 
-.span_1_of_3 {
-  width: 20%;
 
+.teammate-detail h1 {
+  display: inline-block;
+  color: #fff;
+  opacity: 0.9;
+  padding: 15px;
+  margin-top: 40px;
+  text-align: center;
+  letter-spacing: .15em;
 }
 
+.teammate-detail p, .more-info, .teammate-social {
+  color: #fff;
+  text-align: center;
+  line-height: 28px;
+  padding-bottom: 45px;
+  margin-left: 45px;
+  margin-right: 45px;
+  margin-bottom: 0px;
+  opacity: 0.7;
+}
+
+.teammate-social i {
+  color: #fff;
+  opacity: 0.7;
+  padding-right: 15px;
+}
+
+.read-more {
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.7;
+  font-weight: 400;
+  font-family:"GillSans", sans-serif;
+}
+
+a.read-more:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.team-pic {
+  width: 100%;
+  padding: 15px;
+  display: inline-block;
+  min-height: 455px;
+  background-size: cover;
+  background-position: center center;
+  right: 0;
+}
+
+.skills img{
+  background-color: #fff;
+  opacity: 0.8;
+}
+
+.interests img{
+  background-color: #fff;
+  opacity: 0.8;
+}
+
+.team-links {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   MODAL FORM
+   ========================================================================== */
+
+.form {
+  width: 355px;
+  height: auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 40px -10px #000;
+  margin: 20px 40px;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  font-family:'GillSans',sans-serif;
+  position: relative;
+}
+
+form h2 {
+  margin: 0 auto;
+  padding-bottom: 10px;
+  color: #4a4a4a;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: none;
+  outline: none;
+  resize: none;
+  border: 0;
+  font-family:'GillSans',sans-serif;
+  transition: all .3s;
+  border-bottom: 0.5px solid #727272;
+}
+
+input:focus {
+  border-bottom: 4px solid #727272;
+  transition: all .3s;
+}
+
+form p:before {
+  content: attr(type);
+  display: block;
+  margin: 28px 0 0;
+  font-size: 14px;
+  color: #4a4a4a;
+}
+
+#send-btn {
+  display: inline-block;
+  padding: 10px;
+  font-family:'GillSans', sans-serif;
+  font-size: 16px;
+  background-color: #b2d235;
+  color: #fff;
+  cursor: pointer;
+  transition: linear .3s;
+  margin: 0 auto;
+  border-bottom: none;
+}
+
+#send-btn:hover {
+  background: #4d4d4d;
+  color: #fff;
+}
+
+form div {
+  color: #4d4d4d;
+  padding: 16px 4px;
+  text-align: center;
+}
+
+form a:hover {
+  color: #00a9a3;
+}
+
+form span {
+  margin: 10px auto;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    height: auto;
+    left: 20%;
+    top: 30%;
+    margin-left: -150px;
+    margin-top: -150px;
+}
+
+/* Modal Content */
+.modal-content {
+    margin: auto;
+    padding: 40px;
+}
+
+.info {
+  position: relative;
+}
+
+/* The Close Button */
+.close {
+    color: #4a4a4a;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.close:hover,
+.close:focus {
+    color: #b2d235;
+    text-decoration: none;
+    cursor: pointer;
+    transform: rotate(-45deg);
+    content: '';
+    transition: all 0.25s ease-out;
+}
+
+ .close:before, 
+ .close:after {
+    transform: rotate(-45deg);
+    content: '';
+    transition: all 0.25s ease-out;
+    }
+
+
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2017-3-26 23:0:15
+ * http://animista.net
+ * T: @cssanimista
+ * ---------------------------------------------- */
+
+/*@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -.5em;
+    opacity: 0
+    }
+    40% {
+      opacity: .6
+      }
+      100% { 
+        opacity: 1
+        }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -.5em;
+    opacity: 0
+    }
+    40% {
+      opacity: .6
+      }
+      100% {
+        opacity: 1
+        }
+}
+@-webkit-keyframes flip-in-hor-bottom {
+  0% {
+    -webkit-transform: rotateX(80deg);
+    transform: rotateX(80deg);
+    opacity: 0
+    }
+    100% {
+      -webkit-transform: rotateX(0);
+      transform: rotateX(0);
+      opacity: 1
+      }
+}
+@keyframes flip-in-hor-bottom {
+  0% {
+    -webkit-transform: rotateX(80deg);
+    transform: rotateX(80deg);
+    opacity: 0
+    }
+    100% {
+      -webkit-transform: rotateX(0);
+      transform: rotateX(0);
+      opacity: 1
+      }
+}
+@-webkit-keyframes flip-out-hor-top {
+  0% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1
+    }
+    100% {
+      -webkit-transform: rotateX(70deg);
+      transform: rotateX(70deg);
+      opacity: 0
+      }
+}
+@keyframes flip-out-hor-top {
+  0% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1
+    }
+    100% {
+      -webkit-transform: rotateX(70deg);
+      transform: rotateX(70deg);
+      opacity:0
+      }
+}
+
+.flip-out-hor-top {
+  -webkit-animation: flip-out-hor-top 0.75s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  -moz-animation: flip-out-hor-top 0.75s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: flip-out-hor-top 0.75s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+*/
+/* ----------------------------------------------
+ * Generated by Animista on 2017-3-26 22:49:13
+ * http://animista.net
+ * T: @cssanimista
+ * ---------------------------------------------- */
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -.5em;
+    opacity: 0
+    }
+    40% {
+      opacity: .6
+      }
+      100% {
+        opacity: 1
+        }
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -.5em;
+    opacity: 0
+    }
+    40% { opacity: .6
+      }
+      100% {
+        opacity: 1
+        }
+}
+
+@-webkit-keyframes flip-in-hor-bottom {
+  0% {
+    -webkit-transform: rotateX(80deg);
+    transform: rotateX(80deg);
+    opacity: 0
+    }
+  100% {
+      -webkit-transform: rotateX(0);
+      transform: rotateX(0);
+      opacity: 1
+      }
+}
+
+@keyframes flip-in-hor-bottom {
+  0% {
+    -webkit-transform: rotateX(80deg);
+    transform: rotateX(80deg);
+    opacity: 0
+    }
+    100% {
+      -webkit-transform: rotateX(0);
+      transform: rotateX(0);
+      opacity: 1
+      }
+}
+
+.flip-in-hor-bottom {
+  -webkit-animation: flip-in-hor-bottom 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -moz-animation: flip-in-hor-bottom 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: flip-in-hor-bottom 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 
 
 /* ==========================================================================
    FOOTER
    ========================================================================== */
 
-footer {
-  background-color: #000;
-  padding: 28px 0 22px;
-  height: 65px;
-}
 
-.footer-container {
-  height: 65px;
-}
+/*#footer {
+  display: block;
+  position: relative;
+  background-color: #39393a;
+  width: 100%;
+  height: auto;
+  }
+
+#footer h4 {
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}*/
+
+
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+
+
+      @media screen and (min-width: 992px){
+
+        .col-1{ width: 16.66%;}
+        .col-2{ width: 33.33%;}
+        .col-3{ width: 50%;}
+        .col-4{ width: 66%;}
+        .col-5{ width: 83.33%;}
+        .col-6{ width: 100%;}
+
+        .navigation-bar li {
+          padding: 0px;
+          padding-bottom: 10px;
+          margin-top: 4px;
+          margin-bottom: 10px;
+          display: inline-block;
+        }
+
+        .navigation-bar li a {
+          font-size: 110%;
+          letter-spacing: 2px;
+          line-height: 55px;
+          padding: 5px 15px;
+        }
+
+        .navigation-bar img {
+          width: 50px;
+          height: 50px;
+          margin-top: 20px;
+          margin-left: 45px;
+        }
+
+        header {
+          min-height: 630px;
+        }
+
+        header img {
+          z-index: 19;
+          width: auto;
+          height: auto;
+        }
+
+        .logo h1 {
+          display: none;
+        }
+
+        .logo-lg {
+          background-color: #4a4a4a;
+          max-width: 75%;
+        }
+
+        .logo-lg h1 {
+          font-family: 'GillSans', sans-serif;
+          display: block;
+          color: #b2d235;
+          letter-spacing: 15px;
+          font-size: 5em;
+          /*max-width: 74%;*/
+          margin-top: 3em;
+          padding-left: 40px;
+        }
+
+        .strong {
+          font-weight: 675;
+        }
+
+        .slogan {
+          display: none;
+        }
+
+        .slogan-lg {
+          display: block;
+          padding: 0;
+          margin-top: -52px;
+          font-family: 'GillSans', sans-serif;
+        }
+
+        .slogan-lg p{
+          color: #4d4d4d;
+        }  
+
+        .services, .about {
+          height: 450px;
+        }
+
+        .tabs {
+          max-width: none;
+        }
+
+        .fa-4x {
+          font-size: 5em;
+        }
+
+          
+        h1, h2, h4 {
+           font-size:250%;
+           line-height: 1;
+           text-transform: uppercase;
+           font-family: 'GillSans', sans-serif;
+           font-weight: 500;
+           margin: 1em 0; 
+        }
+
+        h2 {
+            font-size:175%;
+            font-weight: 400;
+            margin: 0 0 1em 0;
+        }
+
+        h4 {
+            font-size:150%;
+            font-weight: 300;
+            margin: 0 0 1em 0;
+            text-align: center;
+        }
+       
+        p {
+            font-size:120%;
+            line-height: 1.6;
+            margin-bottom: 2em;
+            font-weight: 400;
+        }
+
+        .teammate {
+          width: 100%;
+          min-height: 480px;
+          position: relative;
+        }
+
+       .teammate-detail, .team-pic {
+          width: 50%;
+          position: absolute;
+          height: 480px;
+          padding: 0px;
+        }
+
+    /*    .team-pic {
+          width: 50%;
+          height: 480px;
+          padding: 0px;
+          position: absolute;
+      } */  
+
+    /*FOR TABLET DISPLAYS*/
+        
+    @media screen 
+    and (min-width: 600px) 
+    and (max-width: 991px) {
+
+        .col-1{ width: 16.66%;}
+        .col-2{ width: 33.33%;}
+        .col-3{ width: 50%;}
+        .col-4{ width: 100%;}
+        .col-5{ width: 100%;}
+        .col-6{ width: 100%;}  
+      
+        .navigation-bar li {
+          padding: 0px;
+          padding-bottom: 10px;
+          margin-top: 4px;
+          margin-bottom: 10px;
+        }
+
+        .navigation-bar li a {
+          font-size: 100%;
+          letter-spacing: 1.5px;
+          line-height: 60px;
+          padding: 5px 15px;
+        }
+
+        .navigation-bar img{
+          width: 50px;
+          height: 50px;
+          margin-top: 20px;
+          margin-left: 45px;
+        }
+
+        header {
+          min-height: 590px;
+        }
+        header img {
+          z-index: 19;
+          width: auto;
+          height: 590px;
+        }
+
+         .logo h1 {
+          display: inline-block;
+          padding-left: 30px;
+          padding-right: 15px;
+        }
+
+        .logo {
+          color: #b2d235;
+          letter-spacing: 10px;
+          font-size: 421%;
+          margin-top: 149px;
+        }
+
+        .logo-lg h1 {display: none;}
+
+        
+        .slogan {display: none;}
+        .slogan-lg {
+          display: inline-block;
+          padding-left: 30px;
+          font-family: 'GillSans', sans-serif;
+          margin-top: 50px;
+        }
+
+        .slogan-lg p{
+          color: #4d4d4d;
+        } 
+
+        .strong {
+          font-weight: 675;
+        }
+
+        .fa-4x {
+          font-size: 5em;
+        }
+
+          
+        h2, h4 {
+           font-size: 250%;
+           line-height: 1;
+           text-transform: uppercase;
+           font-family: 'GillSans', sans-serif;
+           font-weight: 500;
+           margin: 1em 0; 
+        }
+
+        h2 {
+            font-size: 175%;
+            font-weight: 400;
+            margin: 0 0 1em 0;
+        }
+
+        h4 {
+            font-size:120%;
+            font-weight: 300;
+            margin: 0 0 1em 0;
+            text-align: center;
+        }
+       
+        p {
+            font-size:120%;
+            line-height: 1.6;
+            margin-bottom: 2em;
+            font-weight: 400;
+        }
+
+        .team-pic {
+            display: inline-block;
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+
+
+
+
+    }
+
+
+
+
 
 
 
