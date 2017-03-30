@@ -7,25 +7,21 @@ var a = document.getElementById("contact-btn");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
+
 // When the user clicks the link, open the modal 
 a.onclick = function() {
     modal.style.display = "block";
+    isit = true
 }
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";
+    isit = false
 }
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-};
-
 
 //Provide success message alert when form is submitted
 $("#send-btn").click(function () {
+		modal.style.display = "none";
        alert("Thank you for contacting us! We will be in touch very soon!");
-   });
+});
