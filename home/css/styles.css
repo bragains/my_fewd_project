@@ -134,6 +134,7 @@ img {
     border: 0;
 }
 
+
 /* ==========================================================================
    GRID SYSTEM
    ========================================================================== */
@@ -216,7 +217,7 @@ img {
   background-color: #b2d235;
   width: 100%;
   height: 50px;
-  z-index: 3;
+  z-index: 3000;
 }
 
 .navigation-bar img{
@@ -261,7 +262,6 @@ img {
 .navigation-bar a:hover {
   color: #4a4a4a;
 }
-
 
 
 /* ==========================================================================
@@ -432,9 +432,10 @@ li.active a, li.active a:hover {
 
 .about {
   width: 100%;
-  background-color: #00a9a3;
+  background-color: #602d91;
   display: block;
   text-align: center;
+  margin-top: 27px;
 }
 
 .about h1 {
@@ -471,6 +472,9 @@ a .fa-chevron-down:hover {
    PROJECTS - refer to demo.css, style.css, and custom.css
    ========================================================================== */
 
+   #about h4 {
+    color: #fff;
+   }
 
 /* ==========================================================================
    TEAM
@@ -590,6 +594,7 @@ input {
   font-family:'GillSans',sans-serif;
   transition: all .3s;
   border-bottom: 0.5px solid #727272;
+  font-size: 80%;
 }
 
 input:focus {
@@ -791,7 +796,7 @@ form span {
         }
 
         header img {
-          z-index: 19;
+          z-index: 4000;
           width: auto;
           height: auto;
         }
@@ -835,7 +840,11 @@ form span {
         }  
 
         .services {
-          height: 450px;
+          height: 600px;
+        }
+
+        .about {
+          height: 640px;
         }
 
         .tabs {
@@ -882,14 +891,14 @@ form span {
 
         .teammate {
           width: 100%;
-          min-height: 480px;
+          min-height: 640px;
           position: relative;
         }
 
        .teammate-detail, .team-pic {
           width: 50%;
           position: absolute;
-          height: 480px;
+          height: 640px;
           padding: 0px;
           border-top: none;
         }
